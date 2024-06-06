@@ -17,20 +17,6 @@ export default function NewsCard({
     articleGroup.articles.some((article) => article.url === url)
   );
 
-  /*  
-  [
-      {
-        keyword: string, 
-        articles: string[]
-      },
-      {
-        keyword: string, 
-        articles: string[]
-      }
-  ]
-  */
-  console.log(savedArticles);
-
   const toggleBookmark = () => {
     if (isBookmarked) {
       setSavedArticles((prevSavedArticles) => {
