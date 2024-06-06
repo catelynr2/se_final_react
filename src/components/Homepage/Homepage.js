@@ -10,6 +10,7 @@ import { getCards } from "../../utils/Api";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import LoginModal from "../LoginModal/LoginModal";
 import Preloader from "../Preloader/Preloader";
+import NoResults from "../NoResults/NoResults";
 // import ModalWithJustText from "../ModalWithJustText/ModalWithJustText"; I think this may get rendered in the login modal
 
 export default function Homepage() {
@@ -70,7 +71,8 @@ export default function Homepage() {
         <Header />
         <SearchForm onSearch={handleSearchResponse} />
       </div>
-      {hasSearched && !isLoading && (
+      {hasSearched && !isLoading && cards.length === 0 && <NoResults />}
+      {hasSearched && !isLoading && !(cards.length === 0) && (
         <NewsCardList cards={cards} keyword={keyword} />
       )}
       {isLoading && <Preloader />}
