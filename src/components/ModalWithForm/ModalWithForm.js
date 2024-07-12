@@ -16,7 +16,7 @@ export default function ModalWithForm({
 
   return (
     <div className={`modal modal_type_${name}`}>
-      <div className="modal_content">
+      <div className="modal__content">
         <button
           className="modal__close-button"
           type="button"

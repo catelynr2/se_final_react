@@ -3,7 +3,7 @@ import "./About.css";
 
 export default function About() {
   return (
-    <div className="about">
+    <section className="about">
       <img
         className="about__image"
         src="../../../images/author-image.jpg"
@@ -20,6 +20,6 @@ export default function About() {
           learned there, and how you can help potential customers.
         </p>
       </div>
-    </div>
+    </section>
   );
 }

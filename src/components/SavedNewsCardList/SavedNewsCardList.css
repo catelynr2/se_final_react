@@ -6,7 +6,7 @@
   background-color: #f5f6f7;
   padding-top: 0;
   padding-bottom: 50px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .savedlist__cards-display {
@@ -16,5 +16,24 @@
   gap: 15px;
   flex-wrap: wrap;
   white-space: wrap;
-  justify-items: space-between;
+  /* justify-items: space-between; */
+  justify-content: flex-start;
+  /* justify-items: left; */
+}
+
+@media (max-width: 1300px) and (min-width: 768px) {
+  .savedlist {
+    padding-bottom: 32px;
+  }
+  .savedlist__cards-display {
+    gap: 8px;
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .savedlist__cards-display {
+    justify-content: center;
+    gap: 10px;
+  }
 }

@@ -11,13 +11,46 @@
   font-size: 60px;
   font-weight: 400;
   line-height: 64px;
-  margin: 45px 0 18px 0;
+  margin: 80px 0 32px 0;
   flex-wrap: wrap;
 }
 
 .header__text {
   font-family: Roboto, sans-serif;
   font-size: 18px;
-  /* font-weight: 400; */
-  margin: 0 0 55px 0;
+  font-weight: 400;
+  margin-bottom: 88px;
+}
+
+@media (max-width: 867px) and (min-width: 682px) {
+  .header__title {
+    font-size: 36px;
+    line-height: 40px;
+    max-width: 385px;
+    margin: 38px 0 16px 0;
+  }
+
+  .header__text {
+    margin-bottom: 48px;
+    font-size: 18px;
+    max-width: 452px;
+  }
+}
+
+@media (max-width: 681px) {
+  .header {
+    position: relative;
+  }
+  .header__title {
+    font-size: 36px;
+    line-height: 40px;
+    max-width: 285px;
+    margin: 30px 0 0 0;
+  }
+
+  .header__text {
+    margin-bottom: 122px;
+    font-size: 18px;
+    max-width: 288px;
+  }
 }

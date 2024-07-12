@@ -14,6 +14,7 @@ import NoResults from "../NoResults/NoResults";
 // import ModalWithJustText from "../ModalWithJustText/ModalWithJustText"; I think this may get rendered in the login modal
 
 export default function Homepage() {
+  const [signedIn, setSignedIn] = useState(false);
   const [cards, setCards] = useState([]);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
@@ -65,9 +66,13 @@ export default function Homepage() {
   }, []);
 
   return (
-    <div className="Homepage">
+    <div className="homepage">
       <div className="background-image">
-        <Navbar onOpenLogin={handleOpenLoginModal} />
+        <Navbar
+          signedIn={signedIn}
+          setSignedIn={setSignedIn}
+          onOpenLogin={handleOpenLoginModal}
+        />
         <Header />
         <SearchForm onSearch={handleSearchResponse} />
       </div>
