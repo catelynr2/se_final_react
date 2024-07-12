@@ -22,6 +22,7 @@
 
 .search-form__button {
   background-color: #2f71e5;
+  color: #ffffff;
   height: 64px;
   width: 168px;
   border-radius: 50px;
@@ -66,7 +67,7 @@
   }
 
   .search-form__input {
-    width: 255px;
+    width: 256px;
     height: 56px;
     position: static;
   }

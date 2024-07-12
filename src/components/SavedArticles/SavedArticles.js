@@ -14,7 +14,7 @@ export default function SavedArticles() {
   );
 
   return (
-    <>
+    <div className="saved-articles">
       <Navbar signedIn={signedIn} setSignedIn={setSignedIn} theme={"light"} />
       <SavedNewsHeader articles={savedArticles} />
       <div
@@ -22,7 +22,7 @@ export default function SavedArticles() {
       ></div>
       {hasSavedArticles && <SavedNewsCardList cards={savedArticles} />}
       <Footer />
-    </>
+    </div>
   );
 }
 

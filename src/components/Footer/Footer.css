@@ -17,7 +17,12 @@
 
 .footer__nav {
   display: flex;
-  gap: 30px;
+  gap: 40px;
+}
+
+.footer__button-group {
+  display: flex;
+  gap: 40px;
 }
 
 .footer__button {
@@ -29,6 +34,11 @@
   font-weight: 400;
   cursor: pointer;
   text-decoration: none;
+}
+
+.footer__social-group {
+  display: flex;
+  gap: 24px;
 }
 
 .footer__social {
@@ -64,13 +74,8 @@
     width: 288px;
   }
 
-  .footer__button-mobile {
+  .footer__button-group {
     display: grid;
-    gap: 24px;
-  }
-
-  .footer__social-mobile {
-    display: flex;
     gap: 24px;
   }
 }

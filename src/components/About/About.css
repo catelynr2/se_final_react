@@ -11,6 +11,7 @@
   border-radius: 100%;
   width: 464px;
   height: 464px;
+  object-fit: cover;
 }
 
 .about__text {
