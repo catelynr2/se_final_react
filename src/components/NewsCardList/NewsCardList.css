@@ -27,6 +27,7 @@
   flex-wrap: wrap;
   /* white-space: wrap; */
   justify-content: space-between;
+  gap: 16px;
 }
 
 .results__more-button {
@@ -79,6 +80,7 @@
 
 @media (max-width: 767px) {
   .results {
+    max-width: 320px;
     min-height: 1568px;
     padding-bottom: 24px;
   }

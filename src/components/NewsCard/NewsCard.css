@@ -125,4 +125,33 @@
 }
 
 @media (max-width: 767px) {
+  .newscard {
+    width: 288px;
+    height: 440px;
+  }
+
+  .newscard__title {
+    max-width: 256px;
+    max-height: 48px;
+    font-size: 22px;
+    padding: 0 16px 0 16px;
+    -webkit-line-clamp: 2;
+  }
+
+  .newscard__paragraph {
+    -webkit-line-clamp: 4;
+    max-width: 256px;
+    margin: 0 16px 0 16px;
+  }
+
+  .newscard__bookmark-button {
+    top: 16px;
+    left: 232px;
+  }
+
+  .newscard__save-tag {
+    position: absolute;
+    top: 16px;
+    left: 34px;
+  }
 }

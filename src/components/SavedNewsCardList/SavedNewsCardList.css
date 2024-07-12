@@ -33,6 +33,9 @@
 
 @media (max-width: 767px) {
   .savedlist__cards-display {
+    max-width: 320px;
+    min-height: 2276px;
+    padding-bottom: 24px;
     justify-content: center;
     gap: 10px;
   }
