@@ -4,16 +4,15 @@
 
 .savedlist {
   background-color: #f5f6f7;
-  padding-top: 0;
-  padding-bottom: 50px;
-  /* width: 100%; */
+  padding-top: 62px;
+  padding-bottom: 62px;
 }
 
 .savedlist__cards-display {
   display: flex;
-  max-width: 1250px;
+  max-width: 1232px;
   margin: 0 auto;
-  gap: 15px;
+  gap: 16px;
   flex-wrap: wrap;
   white-space: wrap;
   /* justify-items: space-between; */
@@ -23,19 +22,24 @@
 
 @media (max-width: 1300px) and (min-width: 768px) {
   .savedlist {
+    padding-top: 32px;
     padding-bottom: 32px;
   }
   .savedlist__cards-display {
     gap: 8px;
-    max-width: 768px;
+    max-width: 688px;
   }
 }
 
 @media (max-width: 767px) {
+  .savedlist {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .savedlist__cards-display {
-    max-width: 320px;
-    min-height: 2276px;
-    padding-bottom: 24px;
+    max-width: 288px;
+    padding-top: 24px;
+    padding-bottom: 13px;
     justify-content: center;
     gap: 10px;
   }

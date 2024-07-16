@@ -25,14 +25,10 @@ export default function Navbar({
     // }
     // setIsLoginModalOpen((prevState) => !prevState);
   };
-  console.log(signedIn);
 
   const toggleMenuDropdown = () => {
-    console.log(isDropdownOpen);
     setIsDropdownOpen((prevIsDropdownOpen) => !prevIsDropdownOpen);
-    console.log(isDropdownOpen);
   };
-  console.log(isDropdownOpen);
 
   const goToHome = () => {
     navigate("/");

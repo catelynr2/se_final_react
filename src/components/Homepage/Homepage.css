@@ -9,7 +9,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   height: 576px;
-  width: 100%;
+  /* width: 100%; */
   object-fit: cover;
 }
 

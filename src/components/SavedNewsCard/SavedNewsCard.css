@@ -26,8 +26,10 @@
   font-weight: 500;
   font-size: 14px;
   background-color: white;
-  padding: 8px 22px 8px 22px;
+  padding-left: 22px;
+  padding-right: 22px;
   position: absolute;
+  height: 40px;
   top: 24px;
   left: 20px;
   border-radius: 10px;
@@ -127,20 +129,23 @@
   }
 
   .newscard__keyword-tag {
-    padding: 8px 20px;
     top: 8px;
     left: 8px;
+  }
+
+  .newscard__delete-hover-tag {
+    display: none;
   }
 
   .newscard__title {
     max-width: 192px;
     font-size: 22px;
-    -webkit-line-clamp: 3;
+    max-height: 72px;
   }
 
   .newscard__paragraph {
-    -webkit-line-clamp: 4;
-    width: 192px;
+    max-height: 80px;
+    max-width: 192px;
   }
 
   .newscard__delete-button {
@@ -182,6 +187,5 @@
   .newscard__keyword-tag {
     top: 16px;
     right: 152px;
-    height: 24px;
   }
 }
