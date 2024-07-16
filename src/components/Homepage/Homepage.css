@@ -1,6 +1,27 @@
+.homepage {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .background-image {
   background-image: url("/public/images/home-page-background.svg");
   background-size: cover;
-  background-position: center;
-  height: 500px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 576px;
+  /* width: 100%; */
+  object-fit: cover;
+}
+
+@media (max-width: 867px) and (min-width: 682px) {
+  .background-image {
+    background-image: url("/public/images/background-tablet.svg");
+    height: 400px;
+  }
+}
+
+@media (max-width: 681px) {
+  .background-image {
+    height: 536px;
+  }
 }

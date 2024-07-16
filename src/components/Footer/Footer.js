@@ -7,26 +7,43 @@ export default function Footer() {
     <footer className="footer">
       <p className="footer__text">© 2024 Supersite, Powered by News API</p>
       <nav className="footer__nav">
-        <Link to={"/"} className="footer__button">
-          Home
-        </Link>
-        <a href="https://tripleten.com/" className="footer__button">
-          Tripleten
-        </a>
-        <a href="https://github.com/">
-          <img
-            className="footer__social"
-            src="../../../images/github.svg"
-            alt="Github logo"
-          />
-        </a>
-        <a href="https://www.facebook.com/tripleten.tech/">
-          <img
-            className="footer__social"
-            src="../../../images/fb.svg"
-            alt="Facebook logo"
-          />
-        </a>
+        <div className="footer__button-group">
+          <Link to={"/"} className="footer__button">
+            Home
+          </Link>
+          <a
+            href="https://tripleten.com/"
+            className="footer__button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tripleten
+          </a>
+        </div>
+        <div className="footer__social-group">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="footer__social"
+              src="../../../images/github.svg"
+              alt="Github logo"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/tripleten.tech/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="footer__social"
+              src="../../../images/fb.svg"
+              alt="Facebook logo"
+            />
+          </a>
+        </div>
       </nav>
     </footer>
   );

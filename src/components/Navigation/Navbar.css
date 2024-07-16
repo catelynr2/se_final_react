@@ -1,22 +1,35 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: 0 60px;
   border-bottom: 1px solid #c4c4c4;
   box-shadow: inset 0 -1px 0px 0px rgba(255, 255, 255, 0.2);
   height: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .navbar__sitename {
   margin-right: auto;
   font-family: "Roboto Slab", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
   color: white;
+}
+
+.navbar__sitename-light {
+  color: #1a1b22;
 }
 
 .navbar__right-tabs {
   display: flex;
   color: white;
-  gap: 40px;
+  gap: 34px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__right-tabs-light {
+  color: #1a1b22;
 }
 
 .navbar__home-tab {
@@ -24,22 +37,20 @@
   font-weight: 500;
   font-size: 18px;
   cursor: pointer;
+  border-bottom: 3px solid white;
+  height: 80px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.navbar__home-tab-border-selected {
-  position: absolute;
-  width: 50px;
-  height: 4px;
-  background: white;
-  top: 76px;
-}
-
-.navbar__home-tab-border-unselected {
-  display: none;
+.navbar__home-tab-light {
+  border-bottom: none;
 }
 
 .navbar__saved-tab {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 18px;
   cursor: pointer;
@@ -48,15 +59,166 @@
   border: none;
 }
 
-.navbar__signin-button {
+.navbar__saved-tab-light {
+  border-bottom: 3px solid #1a1b22;
+  height: 80px;
+  width: 178px;
+}
+
+.navbar__button-signin {
   border: solid white 1px;
   border-radius: 25px;
   background: none;
   color: white;
   width: 176px;
   height: 48px;
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   cursor: pointer;
+}
+
+.navbar__button-signout {
+  border: solid white 1px;
+  border-radius: 25px;
+  background: none;
+  color: white;
+  width: 112px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__button-signout-light {
+  border-color: #1a1b22;
+}
+
+.navbar__button-name {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  width: 56px;
+}
+
+.navbar__button-name-light {
+  color: #1a1b22;
+}
+
+.img__signout {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar__menu-icon {
+  height: 24px;
+  width: 24px;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__menu-dropdown {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (max-width: 867px) and (min-width: 682px) {
+  .navbar {
+    height: 66px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .navbar__right-tabs {
+    gap: 16px;
+  }
+
+  .navbar__home-tab {
+    font-size: 16px;
+    height: 66px;
+  }
+
+  .navbar__saved-tab {
+    font-size: 16px;
+  }
+
+  .navbar__saved-tab-light {
+    height: 66px;
+  }
+
+  .navbar__button-signin {
+    font-size: 16px;
+    width: 152px;
+    height: 40px;
+  }
+
+  .navbar__button-signout {
+    font-size: 16px;
+    width: 100px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 681px) {
+  .navbar {
+    height: 56px;
+    padding-left: 16px;
+    padding-right: 16px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .navbar__sitename {
+    font-size: 16px;
+  }
+
+  .navbar__right-tabs {
+    display: none;
+  }
+
+  .navbar__menu-icon {
+    display: block;
+  }
+
+  .navbar__menu-dropdown {
+    display: grid;
+    z-index: 1;
+  }
+
+  .navbar__menu-dropdown-content {
+    background-color: #1a1b22;
+    position: relative;
+    height: 230px;
+    width: 100vw;
+  }
+
+  .navbar__home-tab {
+    font-size: 18px;
+    color: #ffffff;
+    border-bottom: none;
+    width: 288px;
+    height: 0;
+    position: sticky;
+    top: 100px;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  .navbar__button-signin {
+    display: grid;
+    align-items: center;
+    width: 288px;
+    height: 56px;
+    margin: 0 auto;
+    position: sticky;
+    top: 150px;
+  }
 }

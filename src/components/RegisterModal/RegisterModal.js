@@ -4,7 +4,7 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 export default function RegisterModal({ isOpen, onClose, onSignInClick }) {
   return (
     <ModalWithForm
-      title="Register"
+      title="Sign up"
       buttonText={"Sign up"}
       secondaryButtonText1={"or"}
       secondaryButtonText2={"Sign in"}

@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import SavedNewsNav from "../SavedNewsNav/SavedNewsNav";
+import React, { useContext, useState } from "react";
+import Navbar from "../Navigation/Navbar";
 import SavedNewsHeader from "../SavedNewsHeader/SavedNewsHeader";
 import SavedNewsCardList from "../SavedNewsCardList/SavedNewsCardList";
 import { articleContext } from "../../contexts/ArticleProvider";
@@ -7,22 +7,23 @@ import Footer from "../Footer/Footer";
 import "../SavedNewsCardList/SavedNewsCardList.css";
 
 export default function SavedArticles() {
+  const [signedIn, setSignedIn] = useState(true);
   const { savedArticles } = useContext(articleContext);
   const hasSavedArticles = savedArticles.some(
     (articleGroup) => articleGroup.articles.length > 0
   );
 
   return (
-    <>
-      <SavedNewsNav />
+    <div className="saved-articles">
+      <Navbar signedIn={signedIn} setSignedIn={setSignedIn} theme={"light"} />
       <SavedNewsHeader articles={savedArticles} />
       <div
         className={hasSavedArticles ? "savedlist" : "savedlist__empty"}
       ></div>
       {hasSavedArticles && <SavedNewsCardList cards={savedArticles} />}
       <Footer />
-    </>
+    </div>
   );
 }
 
-// need a <ProtectedRoute path="/profile" loggedIn={loggedIn}></ProtectedRoute> around this component?
+// need a <ProtectedRoute path="/profile" loggedIn={loggedIn}></ProtectedRoute> around this component??

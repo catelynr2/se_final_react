@@ -10,9 +10,11 @@ import { getCards } from "../../utils/Api";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import LoginModal from "../LoginModal/LoginModal";
 import Preloader from "../Preloader/Preloader";
+import NoResults from "../NoResults/NoResults";
 // import ModalWithJustText from "../ModalWithJustText/ModalWithJustText"; I think this may get rendered in the login modal
 
 export default function Homepage() {
+  const [signedIn, setSignedIn] = useState(false);
   const [cards, setCards] = useState([]);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
@@ -64,13 +66,18 @@ export default function Homepage() {
   }, []);
 
   return (
-    <div className="Homepage">
+    <div className="homepage">
       <div className="background-image">
-        <Navbar onOpenLogin={handleOpenLoginModal} />
+        <Navbar
+          signedIn={signedIn}
+          setSignedIn={setSignedIn}
+          onOpenLogin={handleOpenLoginModal}
+        />
         <Header />
         <SearchForm onSearch={handleSearchResponse} />
       </div>
-      {hasSearched && !isLoading && (
+      {hasSearched && !isLoading && cards.length === 0 && <NoResults />}
+      {hasSearched && !isLoading && !(cards.length === 0) && (
         <NewsCardList cards={cards} keyword={keyword} />
       )}
       {isLoading && <Preloader />}
